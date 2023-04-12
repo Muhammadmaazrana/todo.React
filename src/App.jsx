@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Child from './component/Child'
+
 
 
 
@@ -34,16 +34,26 @@ delete_all=()=>{
       value: ''
     })
   }
+  edit=(i)=>{
+var update=prompt("Edit");
+this.state.todos[i]=update;
+this.setState({
+  todos:this.state.todos
+})
+  }
   render() {
     return (
-      <div>
+      <div className='main'>
 
-        <input type="text" value={this.state.value} onChange={(e) => this.setState({ value: e.target.value })} placeholder='enter value' />
-        <button onClick={this.delete_all}>DeleteAll</button>
-        <button onClick={this.add_todo}>ADD ITEM</button><ul>
+        <input type="text" className='input' value={this.state.value} onChange={(e) => this.setState({ value: e.target.value })} placeholder='enter value' />
+        <button type="button" class="btn btn-success" onClick={this.add_todo}>ADD ITEM</button>
+        <button  type="button" class="btn btn-danger" onClick={this.delete_all}>DeleteAll</button>
+      
+      <ul><br />
           {this.state.todos.map((v, i) => {
-            return <li key={i}>{v}
-              <button onClick={() => this.delete_todo(i)}>delete</button>
+            return  <li  key={i}>{v} <br /><br />
+            <button type="button" class="btn btn-outline-success" onClick={()=>this.edit(i)}>Edit</button>
+              <button type="button" class="btn btn-outline-danger" onClick={() => this.delete_todo(i)}>delete</button><hr />
             </li>
           })}
         </ul>
