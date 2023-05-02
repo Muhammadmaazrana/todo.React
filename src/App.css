@@ -1,3 +1,8 @@
+body{
+  background-color: aqua;
+}
+
+
 .main{
   text-align: center;
   margin-top: 5%;
@@ -14,7 +19,11 @@
   width: 30%;
   margin-top: 30px;
   }
+  
   input{
     width: 80%;
   }
+}
+::placeholder{
+  color: white;
 }
