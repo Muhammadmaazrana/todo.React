@@ -56,7 +56,7 @@ class APP extends React.Component {
       <div className='main'>
           <h1>TODO APP</h1><br />
           <TextField type="text" id="outlined-basic" label="Enter What to do!" variant="outlined" value={this.state.value} onChange={(e) => this.setState({ value: e.target.value })}  />
-        {/* <input type="text" className='input' value={this.state.value} onChange={(e) => this.setState({ value: e.target.value })} placeholder='enter value' /><br /><br /> */}
+         {/* <input type="text" className='input' value={this.state.value} onChange={(e) => this.setState({ value: e.target.value })} placeholder='enter value' /><br /><br />  */}
       <br /><br /> <br /> <button type="button" className="btn btn-success" onClick={this.add_todo}>ADD</button>
         <button type="button" className="btn btn-danger" onClick={this.delete_all}>DeleteAll</button>
 

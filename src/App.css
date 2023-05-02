@@ -1,6 +1,4 @@
-body{
-  background-color: aqua;
-}
+
 
 
 .main{
@@ -25,5 +23,16 @@ body{
   }
 }
 ::placeholder{
+  color: white;
+}
+h1{
+  color: white;
+}
+li{
+  color: white;
+  list-style: none;
+  margin-right: 40px;
+}
+#outlined-basic{
   color: white;
 }
